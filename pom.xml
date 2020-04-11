@@ -30,7 +30,7 @@
 				<username>ahmed024</username>
 				<password>!Amahmed242</password>
 				<environment>Sandbox</environment>
-				<applicationName>demo_jenkinsCloud</applicationName>
+				<applicationName>demo</applicationName>
 				<muleVersion>4.2.2</muleVersion>
 				</cloudHubDeployment>
 				</configuration>

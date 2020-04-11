@@ -26,6 +26,13 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				<cloudHubDeployment>
+				<username>ahmed024</username>
+				<password>!Amahmed242</password>
+				<environment>Sandbox</environment>
+				<applicationName>demo_jenkinsCloud</applicationName>
+				<muleVersion>4.2.2</muleVersion>
+				</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>

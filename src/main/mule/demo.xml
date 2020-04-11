@@ -18,7 +18,7 @@ http://www.mulesoft.org/schema/mule/batch http://www.mulesoft.org/schema/mule/ba
 		<http:listener doc:name="Listener" doc:id="2bcb83d9-46c2-4fa5-8c5a-bfd6894d42b4" config-ref="HTTP_Listener_config" path="/api">
 		</http:listener>
 		<set-payload value="#['Rasool']" doc:name="Set Payload" doc:id="a25ee841-be96-4272-95c3-236279283cf3" />
-		<logger level="INFO" doc:name="Logger" doc:id="846b33a4-efaf-46bf-be14-93fea3bf727d" message="Final payload :: #[payload]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="846b33a4-efaf-46bf-be14-93fea3bf727d" message="#[payload]"/>
 		<error-handler>
 			<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="83cd5f8a-1427-4560-bf93-8b48a5ade23c" >
 				<set-payload value="#['Error']" doc:name="Set Payload" doc:id="33c71fae-7f7b-4168-ab86-4740e4581ad6" />

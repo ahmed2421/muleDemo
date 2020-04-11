@@ -27,11 +27,13 @@
 				<extensions>true</extensions>
 				<configuration>
 				<cloudHubDeployment>
+				<uri>https://anypoint.mulesoft.com</uri>
 				<username>ahmed024</username>
 				<password>!Amahmed242</password>
 				<environment>Sandbox</environment>
 				<applicationName>demo</applicationName>
 				<muleVersion>4.2.2</muleVersion>
+				<workerType>MICRO</workerType>
 				</cloudHubDeployment>
 				</configuration>
 			</plugin>

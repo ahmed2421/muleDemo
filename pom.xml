@@ -28,14 +28,25 @@
 				<configuration>
 				<cloudHubDeployment>
 				<uri>https://anypoint.mulesoft.com</uri>
+				<deploymentType>cloudhub</deploymentType>
 				<username>ahmed024</username>
 				<password>!Amahmed242</password>
 				<environment>Sandbox</environment>
 				<applicationName>demo</applicationName>
 				<muleVersion>4.2.2</muleVersion>
-				<workerType>MICRO</workerType>
+				<redeploy>true</redeploy>
+				<workerType>Micro</workerType>
 				</cloudHubDeployment>
 				</configuration>
+				<executions>
+        <execution>
+            <id>deploy</id>
+            <phase>deploy</phase>
+            <goals>
+                <goal>deploy</goal>
+            </goals>
+        </execution>
+    </executions>
 			</plugin>
 			<plugin>
     <groupId>org.apache.maven.plugins</groupId>

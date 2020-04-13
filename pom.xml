@@ -33,7 +33,6 @@
 				<environment>Sandbox</environment>
 				<applicationName>demo</applicationName>
 				<muleVersion>4.2.2</muleVersion>
-				<redeploy>true</redeploy>
 				<workerType>Micro</workerType>
 				</cloudHubDeployment>
 				</configuration>

@@ -21,29 +21,39 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-				<cloudHubDeployment>
-				<uri>https://anypoint.mulesoft.com</uri>
-				<username>ahmed024</username>
-				<password>!Amahmed242</password>
-				<environment>Sandbox</environment>
-				<applicationName>demo</applicationName>
-				<muleVersion>4.2.2</muleVersion>
-				<workerType>Micro</workerType>
-				</cloudHubDeployment>
-				</configuration>
-			</plugin>
-			<plugin>
+            <groupId>org.mule.tools.maven</groupId>
+            <artifactId>mule-maven-plugin</artifactId>
+            <version>${mule.maven.plugin.version}</version>
+            <extensions>true</extensions>
+            <configuration>
+                <cloudHubDeployment>
+                  <uri>https://anypoint.mulesoft.com</uri>
+                  <muleVersion>4.2.2</muleVersion>
+                  <username>ahmed024</username>
+                  <password>!Amahmed242</password>
+                  <environment>Sandbox</environment>
+                  <applicationName>testapplication-clouddev</applicationName>
+                  <workers>1</workers>
+                  <workerType>MICRO</workerType>
+               </cloudHubDeployment>
+            </configuration>
+             <executions>
+               <execution>
+                  <id>deploy</id>
+                  <phase>deploy</phase>
+                  <goals>
+                     <goal>deploy</goal>
+                  </goals>
+               </execution>
+            </executions> 
+         </plugin>
+			 <!-- <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-deploy-plugin</artifactId>
     <configuration>
         <skip>true</skip>
     </configuration>
-</plugin>
+</plugin>  -->
 		</plugins>
 	</build>
 
@@ -64,9 +74,9 @@
 
 	<repositories>
           <repository>
-            <id>anypoint-exchange-v2</id>
+            <id>anypoint-exchange</id>
             <name>Anypoint Exchange</name>
-            <url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
+            <url>https://maven.anypoint.mulesoft.com/api/v1/maven</url>
             <layout>default</layout>
         </repository>
         <repository>
